@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        폰트를 설정하는 속성 
+        1. 폰트를 변경할 때는 font-family 
+           - 폰트를 복수 개로 적는 경우가 대부분 
+           - 폰트가 없는 경우 "비슷한" 다른 폰트로 대체하기 위해서 
+           - 복수개의 폰트를 넣을 때는, 비슷한 형태의 폰트를 작성해라 
+
+        2. 폰트의 크기를 변경할 때는 font-size 
+        3. 폰트의 두께를 변경할 때는 font-weight -> 디자인적 요소로 <b>태그와 같은 역할 
+           - <b>의 역할을 디자인으로 만든 것 
+            4. 폰트의 모습을 변경할 때는 font-style (이탤릭 등)
+           - <i>의 역할을 디자인으로 만든 것 
+    -->
+
+    <style>
+        /* sytle 태그 내부는 다른 언어(CSS)를 사용 */
+        /* CSS 코드를 작성하기 위해서는 반드시 head 영역에 <style> 태그를 선언해야 함 */
+        /* 
+        
+        CSS 기본문법 ★★★
+        
+            선택자 {
+                속성 : 속성값 
+            }
+        
+
+
+        ＃ 주의점 : 속성 값 입력 후 반드시 세미콜론(;)을 작성
+        ＃ 선택자 내부에 다중으로 여러 선택자를 포함하는 방법은 존재하지 않음(라이브러리는 존재)
+        */
+        h1 {
+            color: blue;
+            font-size: 50px;
+        }
+
+        p {
+            color: yellowgreen;
+            font-family: '궁서체', 'Courier New', 'Courier New', Courier, monospace;
+            font-size: 50px;
+            font-weight: 800;  
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>첫번째 h1</h1>
+    <h1>두번째 h1</h1>
+    <p>첫번째 p태그</p>
+    <p>두번째 p태그</p>
+
+
+</body>
+
+</html>

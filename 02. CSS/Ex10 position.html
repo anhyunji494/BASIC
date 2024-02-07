@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        #div1{
+            background-color: lightsalmon;
+        }
+        #div2{
+            background-color: blanchedalmond;
+        }
+        #div3{
+            position: absolute;
+            background-color: darkkhaki;
+            right: 0;
+        }
+        #div4{
+            width: 500px;
+            height: 500px;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        #div5{
+            background-color: lightgoldenrodyellow;
+            position: fixed;
+            top : 0px;
+            right: 0px;
+            
+        }
+        
+
+        /*
+            position: 요소의 위치를 배치하는 속성
+            1) static : 기본 값, 태그가 생성되는 기본 위치
+            2) relative : 기본 값을 기준으로 위치를 변경 
+            => 원래 생성 위치에서 값에 따라 변경
+            = left, top, bottom, right => 값을 부여한 만큼 이동 
+            3) absolute : 영향을 받지 않고 자유롭게 배치 
+                - 주의점 : 부모 태그가 static 상태인 경우 body 태그를 중심으로 이동
+                          부모 태그가 reglaive, fixed 
+            4) fixed : 화면 특정 영역에 고정 
+                - 사용 예시 : 웹툰 리모컨, 쇼핑몰 장바구니, 화면 상단이동
+        */
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    
+    <div id="div4">
+        <div id="div3"></div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="div5"></div>
+</body>
+</html>

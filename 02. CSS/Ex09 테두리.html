@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            border : 테두리를 만드는 속성
+            선의 두께, 선의 종류, 선의 색깔 나열 
+            border-radius : 테두리를 깎는 속성 (원을 만들 때 사용)
+            * 주의점 : 원을 만드려면 크기의 절반 이상 사용
+            => 반응형 웹을 만들기 위해 퍼센트(%) 단위를 사용하는 것이 효율
+            => 영역 자체가 동그랗게 만들어지는 것은 아님 [모든 영역은 'box'로 구성됨]
+            
+        */
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue ;
+            border:0.3px solid lightgray;
+            /* border-radius: 50%; */
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

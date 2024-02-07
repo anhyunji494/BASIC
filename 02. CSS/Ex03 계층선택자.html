@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+            계층 선택자 : 아이디, 클래스 구분자가 없는 경우 포함 관계를 지칭해 선택하는 방법
+            1. 자손 선택자 [ ]        
+            2. 자식 선택자 [>] ★ : 선택자의 경유지를 거쳐서 최종 목적지로 
+            3. 인접형제 [+] : 기준점을 시작으로 바로 옆에 있는 태그
+            4. 후행선택자 [~] : 기준점을 시작으로 뒤에 오는 모든 태그 
+            5. 가상클래스 선택자 : 자식들 중에 몇번째 자식을 지정할 때 사용 [nth=child(n)]
+
+            주의 : 계층 선택자를 사용할 때 id, class 등 모든 선택자를 (혼합해서도) 사용할 수 있음 
+                  최대한 좁고 정확하게 적는게 좋음 
+        */
+
+        div > p{
+            color: red;
+        }
+
+        div > ol > li{
+            color : yellow
+        }
+
+        #test > ol > li{
+            color : greenyellow 
+        }
+        /* 혼합 선택자 사용 가능! */
+
+        p + h1{
+            color: antiquewhite;
+        }
+        /* 형제 선택자 사용 예시  */
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id = "test">
+
+        <p>p태그</p>
+        <h1>h1태그</h1>
+        <ol>
+            <li>첫번째 리스트</li>
+            <li>두번째 리스트</li>
+            <li>세번째 리스트</li>
+        </ol>
+
+    </div>
+</body>
+</html>

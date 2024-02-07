@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  [!!] 선택자의 범위가 좁을수록 우선순위가 높음
+            1. 모든 태그를 선택하는 선택자 "전체 선택자" [*{속성}] - 우선순위 0점
+            2. 특정 태그를 선택하는 선택자 "태그(타입) 선택자" [태그 이름 {속성}] -우선순위 1점
+          ★ 3. 특정 태그들을 묶어서 선택하는 선택자 "클래스 선택자" [.클래스 이름{속성}] - 우선순위 10점
+               - 특징 : 그룹화로 클래스 이름은 중복 사용이 가능 
+               - 사용처 : 중복이 가능하기 때문에 디자인(CSS)에서 가장 많이 사용
+            4. 특정 태그에게 고유한 값을 부여하는 선택자 = 아이디 선택자 [#아이디 이름{속성}] - 우선순위 100점 
+               - 특징 : 아이디 이름은 중복 사용이 불가능 (고유한 값)
+               - 사용처 : 중복이 불가능하기 때문에 기능(JS)에서 가장 많이 사용 
+        
+            우선순위 : id(100) > class(10) > 태그(1) > 전체(0)
+            > 우선순위를 무시하는 단 한가지 방법(권장사항X/강제) 
+            - 속성값 뒤에 !important 작성 
+            - html 템플릿의 디자인을 수정할 때, 도저히 수정할 부분을 못 찾겠으면 그냥 직접 작성해서 !important를 넣자 
+            
+        */
+        p.test{
+            color: blueviolet;
+        }
+
+        #second{
+            color: brown;
+        }
+        #h1style {
+            color: yellow;
+        }
+        .h1class {
+            color : red !important
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>첫번째 h1</h1>
+    <h1>두번째 h1</h1>
+    <p class="test">첫번째 p태그</p>
+    <p class="test" id = "second">두번째 p태그</p>
+    <p class="test">세번째 p태그</p>
+    <p class="test">네번째 p태그</p>
+    <h1 id="h1style" class = "h1class">강제로 스타일을 변경</p>
+</body>
+</html>

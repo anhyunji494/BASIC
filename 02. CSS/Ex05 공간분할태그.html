@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        span{
+            display: block;
+        }
+        #txt{
+            display: none;
+        }
+        p:hover + span + #txt{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        공간분할태그
+        1) div : 화면에 보이지는 않지만 가상의 공간을 쪼갤 때 사용 => 가장 많이 사용 
+        2) p : 화면에 문단을 작성할 때 사용하는 공간 
+        3) span : 문단 안에 특정 컨텐츠를 지칭할 때 사용하는 태그 
+        
+        Display 속성
+        1. block : 한줄 전체의 크기를 할당
+        2. inline : 작성한 컨텐츠의 크기만큼 공간 할당 
+           * 높이, 가로 수정 불가 
+        3. none : 화면상에 숨길 때 사용
+           * 화면 상에 숨겨뒀다가 hover 또는 click 같은 이벤트가 발생했을 때 디스플레이를 변경해서 보여줌 
+           * 태그가 삭제되는 게 아니라, 화면 상에서만 "숨겨짐"
+    -->
+
+     <div>
+
+     </div>
+     <p>block요소</p>
+     <span>inline요소</span>
+     <span id="txt">내용을 숨기겠습니다</span>
+</body>
+</html>

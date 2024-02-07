@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이미지태그
+    - <img>
+    - 필수 속성 : src(source의 줄임말)
+    - <img> 나 이미지 보여줄게 
+    - src 근데 그 이미지 어디있냐면 
+    -->
+
+    <!-- 1) 절대 경로: 고유한 경로 -->
+    <img 
+        width = "300px"
+        src = "https://scontent-ssn1-1.xx.fbcdn.net/v/t39.30808-6/396714498_644751417844553_8205161809154629548_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3635dc&_nc_ohc=KukDxaeFxj0AX831jTZ&_nc_ht=scontent-ssn1-1.xx&oh=00_AfDHTLEB4KX6jpPmi3klsfS2F1JEd2_YP1NQsiIbXABOVg&oe=65C1045C">
+
+    <!-- 2) 상대 경로: 현재 있는 파일의 위치에 따라 다르게 작성 -->
+    <!-- 폴더에 접근하기 
+    2-1)현재 기준으로 바로 접근이 가능: ./폴더이름/파일이름
+    2-2)상위 폴더로 이동해서 접근 가능: ../
+    2-3)상위의 상위: ../../ -->
+
+    <img 
+        width = "300px" 
+        src = "./image/pic.jpg">
+</body>
+</html>

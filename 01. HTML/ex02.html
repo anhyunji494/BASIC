@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 1. 제목 태그 : header의 약자
+    숫자를 붙여서 사용
+    크기, 굵기별로 숫자를 다르게 사용(h1~h6)
+    숫자가 클수록 크기, 굵기는 작다 
+  -->
+  <h1>h1태그</h1>
+  <h2>h2태그</h2>
+  <h3>h3태그</h3>
+
+
+  <!-- 2. 내용 태그 (p, span)
+    2-1) p태그 (paragraph)
+     - 단락으로 표현되기 때문에 가로 한줄의 영역을 전부 차지 
+     - 남은 자리가 없으니 다음 요소는 자연스럽게 개행이 됨 
+    2-2) span태그 
+     - 문장으로 표현되기 때문에 내가 넣은 내용(content)만큼만 본인의 영역으로 차지 
+     - 남은 자리가 있을 때는 옆에 붙여서 배치, 자리가 없는 경우 개행 
+     - span 태그는 특징이 X(공태그)
+     - 그럼에도 쓰는 이유는? 특정 요소에만 접근하기 위함 
+     - -> 시작태그가 없으면 속성값을 넣을 수 없기 때문에 특정 요소에만 다른 특징을 줄 수 없다  
+   -->
+
+  <p>딸기요거트</p>
+  <p>자바칩프라푸치노</p>
+  <!-- br태그(break): 개행태그
+                    : 내용이 별도로 필요하지 않은 기능 태그
+                      따라서 끝 태그를 사용하지 않아도 무방 (생략되는 것)
+                      => 홀 태그라고 칭함
+                    <br></br> => <br/> => <br> -->
+  <br>
+  <span>JACKPOT</span>
+  <span style="color: blue;">뭐가</span>
+
+  슴슴한 덮밥
+
+  <!-- hr(horizontal): 구분선 -->
+  <hr>
+
+  <!-- 3. 강조 태그(b, strong)
+  3-1) b (bold) : 시각적 의미의 강조 
+                  -> 웹페이지를 청각적으로 들었을 때 강조 X
+  3-2) strong : 실질적 의미의 강조 -> 기능적 강조 
+  -->
+  <b>b태그</b>
+  <strong>strong태그</strong>
+
+  <!-- 속성 연습 
+  * 사용 방법: 시작태그 안쪽에 속성과 값을 넣음 
+  <p 속성 = "값" 속성 = "값"></p>
+  -->
+
+  <hr color="gray" size="50" width="100">
+
+  <hr color="red" size="140" width="150">
+  <hr color="orange" size="120" width="150">
+  <hr color="yellow" size="100" width="150">
+  <hr color="green" size="80" width="150">
+  <hr color="blue" size="60" width="150">
+  <hr color="navy" size="40" width="150">
+  <hr color="purple" size="20" width="150">
+
+  <!-- tip 
+  
+    1) 태그 * 숫자 : 숫자만큼 태그 복사 
+    2) alt shift 방향키 : 방향대로 한줄 복사 
+    3) 태그 정렬 : 원하는 범위 드래그 
+    alt shift F : 단, 태그 정렬은 내가 원하는 범위 드래그해서 쓰기 
+    (* 현업에서 무척 예민함 !! )
+  
+  -->
+
+</body>
+
+</html>

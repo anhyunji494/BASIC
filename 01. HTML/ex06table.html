@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        
+        [표 만들기]
+    1. 표를 만들겠다고 선언 <table>
+    2. 가로를 만든다 <tr> = table row
+    3. 세로를 만든다 <td> = table data
+    4. 안에 내용을 채운다 : td의 content 영역 
+    5. 컬럼 지정한다(선택) : th = table head 
+
+-->
+
+    <!-- 1. 테이블 선언 -->
+    <table border="1px solid black">
+        <caption>메뉴판</caption>
+        <!-- 2. 테이블에 줄 생성: tr을 개수만큼 -->
+
+
+        <tr bgcolor="lightblue"=">
+
+        <th>메뉴</th>
+        <td></td>
+    </tr>
+    <tr>
+        <td>아메리카노</td>
+        <td rowspan=" 2">3500</td>
+        </tr>
+        <tr>
+            <td>카페라떼</td>
+
+        </tr>
+    </table>
+
+    <!-- 
+        2. 병합기능 
+           : 표의 두 칸 이상 차지 = > 병합 이용 
+        rowspan : 아래 병합
+        colsapn / 가로 셀과 혼함 
+        - 사용방법: rewspan, colspan 을 속서에 넣고 병압하고 싶은 칸의 수만큼 값에 넣기 
+
+     -->
+
+    <!--
+
+        3. 테이블의 한 칸, 데이터를 넣는 공간
+        3-1) <td> : table data 
+            - 데이터를 넣어주는 공간
+        3-2) <th> : table hdeader
+            - 표의 헤더 부분을 작성 할 때 사용
+            - 글자가 굵어지고 가운데 정렬 
+
+      -->
+    <hr>
+    <!-- 실습! -->
+    <table border="1px solid black">
+
+        <!-- (tr>td*4)*5 -->
+
+        <caption>스마트인재개발원</caption>
+        <tr bgcolor="yellow">
+            <th align="center">이름</th>
+            <th colspan="2">성별/주소</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td align="center">안현지</td>
+            <td>여자</td>
+            <td>곡성</td>
+            <td rowspan="4"></td>
+        </tr>
+        <tr>
+            <td align="center">박민</td>
+            <td>남자</td>
+            <td>광주</td>
+        </tr>
+        <tr>
+            <td align="center">김수종</td>
+            <td>남자</td>
+            <td>광주</td>
+        </tr>
+        <tr>
+            <td align="center">박덕근</td>
+            <td>남자</td>
+            <td>광주</td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>
