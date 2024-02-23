@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="anhyunji" />
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다." />
+    <meta name="keywords" content="안현지, 웹표준, 웹접근성, 사이트 만들기" />
+    <meta name="generator" content="vscode" />
+    <title>WEB STANDARD SITE</title>
+
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body>
+    <!-- 스킵 네비게이션 -->
+    <div id="skip">
+        <a href="#cont_nav">전체 메뉴 바로가기</a>
+        <a href="#cont_ban">배너 영역 바로가기</a>
+        <a href="#con_con">컨텐츠 영역 바로가기</a>
+    </div>
+    <!-- //스킵 네비게이션 -->
+
+
+    <div id="wrap">
+      <div id="header">
+        <div class="container">
+            <div class="header">
+                <div class="header-menu">
+                    <a href="https://wiss.tistory.com">Designer</a>
+                    <a href="https://webstoryboy"">Publisher</a>
+                    <a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw">Youtube</a>
+                </div>
+                <!-- //헤더 메뉴 -->
+                <div class="header-tit">
+                    <h1>Professional Publisher &amp; Designer</h1><br>
+                    <a href="https://webstoryboy.co.kr">webstoryboy.co.kr</a>
+                </div>
+                <!-- //헤더 타이틀 -->
+
+                <!-- 이미지를 표현하는 방법 
+                  1. img 태그로 표현 (의미가 있을 때) ex) 네이버 로고 / alt 태그 - 대체 문자 표현 
+                  2. background 속성으로 표현 (의미가 없을 때) ex) 그라데이션 배경 
+                  3. 이미지를 backgound 속성으로 표현 
+                  단, 웹표준을 준수하기 위해서 
+                  + 가상으로 대체할 문자를 만들어줌[IR 효과] => 이미지 스프라이트[하나의 이미지에 아이콘 등을 모아두고 잘라서 사용] 이용 => 용량이 줄어들고 편리함 
+                 -->
+                <div class="header-icon">
+                  <a href="#" class="icon1"><span class="ir_pm">icon1</span></a>
+                  <a href="#"class="icon2"><span class="ir_pm">icon2</span></a>
+                  <a href="#" class="icon3"><span class="ir_pm">icon3</span></a>
+                  <a href="#" class="icon4"><span class="ir_pm">icon4</span></a>
+                </div>
+                <!-- //헤더 아이콘 -->
+            </div>
+        </div>
+      </div>
+      <!-- //header -->
+      <div id="contents">
+        <div id="cont_nav">
+          <div class="container">cont_nav</div>
+        </div>
+        <!-- //cont_nav -->
+        <div id="cont_tit">
+          <div class="container">cont_tit</div>
+        </div>
+        <!-- //cont_tit -->
+        <div id="cont_ban">
+          <div class="container">cont_ban</div>
+        </div>
+        <!-- //cont_ban -->
+        <div id="con_con">
+          <div class="container">con_con</div>
+        </div>
+        <!-- //con_con -->
+      </div>
+      <!-- //contents -->
+      <div id="footer">
+        <div class="container">footer</div>
+      </div>
+      <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+  </body>
+</html>
