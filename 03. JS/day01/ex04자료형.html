@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자료형 
+        // (1) String 문자형 
+        // "", '' 둘다 사용 가능 
+        let name = "선영표"; 
+        console.log('str', name); 
+        console.log('str', typeof(name))
+
+        // (2) number 숫자형 
+        let num = 3; 
+        console.log('num', num);
+        console.log('num', typeof(num))
+
+        // (3) boolean 참, 거짓 
+        let ck = true;
+        console.log('boo', ck);
+
+        // (4) undefined와 null의 구분 
+        // 4-2) undefined 정의가 되지 않았다 => 선언만 되고 값이 X 
+        // JS는 데이터를 넣어줘서 동적으로 자료형을 결정하는 언어 
+        // => 따라서 처음에 데이터를 넣지 않고 선언한다면 undefined의 형태가 됨 
+        let data; // 절대 이렇게 선언하지 말 것 ★
+        console.log('undf', data);
+
+        // 4-2) null 없다 => 의도적으로 그 공간을 비워둘 때 
+        let data2 = 3000; 
+        console.log(data2)
+        data2 = null 
+        console.log(data2)
+
+
+    </script>
+</body>
+</html>

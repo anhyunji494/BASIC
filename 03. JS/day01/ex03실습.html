@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 사용자의 이름을 입력받아준다. ('이름을 입력하시오. ')
+        let name = prompt('이름을 입력하세요.')
+        // 2. 사용자에게 신청곡을 입력받는다. ('신청곡을 작성해주세요.')
+        let song = prompt('신청곡을 작성해주세요.')
+        // 3. console창에 출력문 
+        // xxx 님이 신청하신 노래는 xxx 입니다. 
+        // 3-1. 연산
+        console.log(name+" 님이 신청하신 노래는 " + song+"입니다.")
+        // 3-2. 쉼표 
+        console.log(name," 님이 신청하신 노래는 " , song,"입니다.")
+        // 3-3. ` (백틱)
+        // ${}` 을 사용하면 문장 안에 변수를 입력할 수 있음 
+        console.log(`${name}님이 신청하신 노래는 ${song}입니다`)
+    </script>
+</body>
+</html>
