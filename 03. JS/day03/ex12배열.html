@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    //0. 배열 
+    //-"같은 타입"의 여러 변수를 하나의 묶음으로 묶어주는 것
+    //- 크기가 가변적 (정해진 크기를 넘어가면 자동으로 저장 공간 할당)
+
+    //기호: 대괄호 []
+
+    //1. 배열의 선언 
+    let member = [] ; 
+    console.log(member);
+
+    // 2. 배열의 할당 
+    member = ['안현지', '안예진', '안성준']
+    console.log(member)
+    
+    // ** 주의할 점 : undefiened으로 배열을 선언하고 사용할 수 없다. 
+    // let arr ; 
+    // arr[2]; 
+    // => 사용 불가 
+
+    // 선언 + 할당 
+    let arr = [1,2,3];
+
+    // 3. 배열 내 데이터에 접근 : 배열이름[인덱스]
+    console.log(member[1]);
+    
+    // 4. 배열 내 값 변경 : 배열이름[원하는인덱스] = '변경할 새로운 데이터'
+    member[0] = '키키';
+    console.log(member)
+
+    // 5. 배열 내 전체 데이터 출력 : for문 
+    for(let i = 0 ; i < member.length ; i++){
+        console.log(member[i]);
+    }
+
+    // 배열함수 : 배열을 쉽게 사용할 수 있도록 제공해주는 함수 
+    // 1. 배열 안 마지막 인덱스에 값을 넣어준다 : push()
+
+    member.push('군밤'); 
+    console.log('push', member);
+
+    // 2. 배열 안 마지막 인덱스 값을 삭제해준다 : pop()
+    member.pop();
+    console.log('pop', member);
+
+    // 참고 ! 
+    // 배열 첫번째 인덱스에 값을 넣기 : unshift(), 값을 빼기: shift()
+    member.unshift('안현지');
+    console.log('shift', member)
+
+    // 3. 배열 안에 특정 데이터가 포함 되어있는지 검사 : include()
+    // 주로 검색창에 자주 쓰임 
+    console.log('키키 있니?', member.includes('키키'));
+    console.log('삼식이 있니?', member.includes('삼식이'));
+
+    // 4. 데이터의 인덱스 번호를 확인하는 함수 : indexOf()
+    console.log('키키 있는 곳 : ', member.indexOf('키키'));
+
+    // 5. 배열 내 특정 데이터를 추출 vs 제거 
+    // slice = 추출 
+    // splice = 제거 
+
+    // 5-1. slice
+    // 특정 값을 기존의 배열을 건드리지 않고 새로운 배열로 복제해서 만든다 
+    // 배열이름.slice(시작인덱스, 끝내는인덱스+1)
+    // => 새로운 배열이 됨 
+    let unit = member.slice(0, 2);
+    console.log(unit);
+    console.log('원본', member);
+
+    // 5-2. splice (탈퇴, 재배치)
+    // 기존 배열에 접근, 특정 값을 제거 또는 대체 
+    // 배열이름.splice(시작인덱스, 제거할개수, 대체할값(option))
+    member.splice(0, 2, '안종선'); 
+    console.log('원본',  member);
+
+    // ** 음수 접근 
+    console.log(member.at(-1))
+    // 뒤에서부터 출력, 1년여 전 출시 
+
+    </script>
+</body>
+</html>

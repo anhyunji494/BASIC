@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 (Object) : 속성(property)과 기능(method)로 구성 되어있는 데이터의 집합 
+        // 속성까지 기재되어 있기 때문에 데이터의 가독성이 good 
+        // 중괄호 이용 {}
+
+        // 객체 안에는 기본데이터타입, array, object 등 데이터 담을 수 있음 
+
+        // 객체 내 데이터 접근 방법 => 마침표 (.)
+        // ex) console.log()
+
+        // (1) 객체 선언 
+        let person = {
+            name:'임나연',
+            birthYear:1995, 
+            group:'트와이스',
+            skill : function(){
+                alert('노래부르기')
+            }
+        }
+        console.log(person)
+
+        // (2) 객체 내 데이터에 접근하는 방법 
+        // case1 ) 객체이름.key
+        console.log(person.name)
+
+        // case2 ) 객체이름["key"]
+        console.log(person["name"])
+
+        // (3) 객체 내 데이터 변경 
+        person.group = '아이브'
+        console.log(person)
+
+        // (4) 객체 내 함수 호출
+        // = console.log()
+        person.skill()
+
+        // ** 배열 안에 객체를 넣을 수 있고, 객체 안에 배열을 넣을 수 있다 
+
+        // (1) 배열 안에 객체 넣기 
+        let orderList = [
+            {
+                name : '아메리카노',
+                temp : 'ice', 
+                stamp : true,
+                place : 'takeout'
+            }, {
+                name : '딸기버블티', 
+                temp : 'ice', 
+                stamp : true, 
+                place : 'here'
+            }
+        ]
+
+        // 배열에 접근(인덱스번호), 객체에 접근(.key)
+        console.log(orderList[1].temp, orderList[1].name)
+
+        // (2) 객체 안에 배열 넣기 
+        let person2 = {
+            name : '선영표', 
+            hobby : ['캠핑', '게임', '코딩']
+        }
+
+        console.log(person2.hobby[0])
+    </script>
+</body>
+</html>

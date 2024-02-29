@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        
+        포켓몬(pokemon)배열 생성
+        3마리 => name, type, skill 
+        ex) 피카츄, 전기, console로 백만 볼트 ~ 
+
+        결과창에 출력
+        제가 가지고 있는 포켓몬은 메타몽, 이상해씨, 파이리 입니다. 
+        제가 가장 좋아하는 포켓몬은 메타몽이고 변신타입 입니다. 
+        console로 스킬 출력 
+        */
+
+        poketmon = [
+            {name : '피츄', 
+             type : '전기', 
+             skill : '정전기'
+            
+            }, {
+             name : '메타몽', 
+             type : '노멀', 
+             skill : '유연'
+            }, {
+             name : '잠만보', 
+             type : '노멀', 
+             skill : '두꺼운지방'
+            }
+        ]
+
+        console.log('제가 가지고 있는 포켓몬은 ', poketmon[0].name, poketmon[1].name, poketmon[2].name, ' 입니다.')
+        console.log('제가 가장 좋아하는 포켓몬은 ', poketmon[1].name, '이고 ', poketmon[1].type, '타입 입니다.')
+        console.log(poketmon[1].skill, "!!")
+
+    </script>
+</body>
+</html>

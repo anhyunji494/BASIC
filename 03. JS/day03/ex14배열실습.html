@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 컴퓨터 : 랜덤 
+        // 유저 : 선택 
+
+        // 지금부터 가위바위보를 시작합니다. 이때, 컴퓨터는 랜덤하게 사용자는 선택으로 가위바위보를 합니다. 
+
+        // 1. arr 이라는 배열 안에 '가위', '바위', '보' 데이터를 할당합니다. 
+        let arr = ['가위', '바위', '보']
+        // 2. 사용자의 선택을 입력받습니다. (myChoice)
+        // '무엇을 내시겠습니까?' (가위, 바위, 보)
+        let myChoice = prompt('무엇을 내시겠습니까?')
+        // 3. 컴퓨터의 선택을 세팅합니다. (comChoice)
+        // 0, 1, 2 라는 랜덤한 숫자를 이용해서 랜덤한 값을 추출 
+        let indx = Math.floor(Math.random() * 3) 
+        let comChoice = arr[indx]
+        // 4. 나의 선택 / 컴퓨터의 선택을 console 창에 출력 
+
+        console.log('나의 선택: ', myChoice)
+        console.log('컴퓨터의 선택: ', comChoice)
+        let result = ''
+        if (myChoice == comChoice){
+            result = '무승부!'
+        } else if((myChoice=="바위" && comChoice=="가위") || (myChoice=="가위" && comChoice=="보") || (myChoice=="보" && comChoice=="바위")) {  
+            result = '우승!'
+        } else if((myChoice=="바위"&&comChoice=="보")||(myChoice=="가위"&&comChoice=="바위")||(myChoice=="보"&&comChoice=="가위")){
+            result = '패배!'
+        } else {
+            console.log('정확히 입력해주세요.')
+        }
+        // 5. 가위바위보의 결과 출력 (결과는 사용자 입장에서 승리, 패배, 무승부)
+        // 결과 또한 console 창에 출력 
+        // 
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ['가위', '바위', '보']; 
+        let myChoice = prompt('무엇을 내시겠습니까? (가위, 바위, 보)'); 
+        let ranNum = parseInt(Math.random()*3); 
+        let comChoice = arr[ranNum]; 
+
+        console.log('나의 선택: ', myChoice );
+        console.log('컴퓨터의 선택: ', comChoice );
+        
+        let result = ""; 
+
+        if(myChoice === comChoice){
+            result = '무승부'; 
+        } else if (myChoice === '가위'){
+            result = comChoice === '바위' ? '패배' : '승리'
+        } else if (myChoice === '바위') {
+            result = comChoice === '보' ? '패배' : '승리'
+        } else if (myChoice === '보'){
+            result = comChoice === '가위' ? '패배' : '승리'
+        } else {
+            result = '게임 오류 ! 다시 도전해주세요. '
+        }
+
+        console.log('게임 결과는 ', result, ' 입니다. ')
+
+    </script>
+</body>
+</html>
