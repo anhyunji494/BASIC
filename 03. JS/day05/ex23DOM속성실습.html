@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <input type="text" id="name">
+    <button id="btn">변경!</button>
+    <div id ="place"><img id = 'img'
+    src="#"
+    width="200px"></div>
+
+    <script>
+        // STEP 1. 사진 두개의 이미지 주소를 구한다  (url1, url2)
+        let url1 = 'https://i.namu.wiki/i/ja3KaNWwMqRU1PtwyLI2mZG8zS9rfFawEkR_Wh2-aucLIMeZaf-bz_QuU2D8wQaaI7ztXB8rCGvUmyoEINgVBA.webp';
+    
+        let url2 = 'https://i.namu.wiki/i/E9N_8rCkoIdP00SmXUfCXEX3erzZMKf_wqESt0TcvTKh0BZ5t3qQ2sPh-t9q-15iwNdbezda4dnUzcWUBC065w.webp';
+        
+        // STEP 2. '변경!' 이라는 버튼을 클릭 시, ====================================
+        // STEP 3. 사용자가 input태그 안에 작성한 내용을 감지 => (inputText) 
+
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', ()=>{
+            console.log('btn ck');
+            let input = document.getElementById('name');
+            console.log(input.value)
+            if(input.value=='키키'){
+                console.log('키키 입력');
+                let imgTag = document.getElementById('img');
+                imgTag.setAttribute('src', url1);
+            } else if(input.value=='지지'){
+                console.log('지지 입력');
+                let imgTag = document.getElementById('img');
+                imgTag.setAttribute('src', url2);
+            } else {
+                let div = document.getElementById('place');
+                div.innerHTML = "잘못 입력하셨습니다."
+            }
+        })
+
+        // STEP 4. console창에 확인용으로 찍어줄 것 
+        // STEP 5. 조건에 맞게 사진을 배치할 것 
+        //         '사진1' 이라고 입력시, 사진1 '사진2' 사진2 나머지 => 잘못입력하셨습니다 
+        // ==========================================================================
+    </script>
+</body>
+</html>

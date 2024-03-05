@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>클릭 한번 해볼까요~?</h1>
+    <button id="h1Btn">h1태그 생성</button>
+    <button id="aBtn">a태그 생성</button>
+    <button id="ulBtn">ul태그 생성</button>
+    <div id="place"></div>
+
+    <script>
+      // STEP 1) h1태그 생성이라는 버튼을 클릭 했을 때, id가 place 인 공간에
+      //         <h1>DOM 활용하기</h1> 라는 내용이 '누적'되도록 할 것
+
+      let btn_h1 = document.getElementById("h1Btn");
+      btn_h1.addEventListener("click", () => {
+        let place = document.getElementById("place");
+        place.innerHTML = place.innerHTML + "<h1>DOM 활용하기</h1>";
+      });
+      // STEP 2) a태그 생성이라는 버튼을 클릭 했을 때, id가 place 인 공간에
+      //          <a href="http://google.com">Google로 이동</a> 이라는 내용이 '누적' 되도록 할 것
+      //          이 때, 반드시 실제로 이동되는 하이퍼텍스트여야 한다.
+      let btn_a = document.getElementById("aBtn");
+      btn_a.addEventListener("click", () => {
+        let place = document.getElementById("place");
+        place.innerHTML =
+          place.innerHTML + "<a href='http://google.com'>Google로 이동</a><br>";
+      });
+      // STEP 3) ul태그 생성이라는 버튼을 클릭했을 때, id가 place인 공간에
+      //      <ul> <li>HTML</li><li>CSS</li><li>JS</li> </ul> 이라는 내용이 '누적'되도록 할 것
+      let btn_ul = document.getElementById("ulBtn");
+      btn_ul.addEventListener("click", () => {
+        let place = document.getElementById("place");
+        place.innerHTML =
+          place.innerHTML +
+          "<ul> <li>HTML</li><li>CSS</li><li>JS</li> </ul> <br>";
+      });
+    </script>
+  </body>
+</html>

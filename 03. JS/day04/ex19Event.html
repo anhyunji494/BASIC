@@ -45,6 +45,21 @@
         btn2.addEventListener('click', popUp);
         btn2.addEventListener('click', popUp2);
 
+        // ** 함수를 직접 등록하는 경우 
+        // 콜백함수 : 특정 시점에만 호출되는 함수 
+        // 함수 안에 있는 함수 => 무조건 콜백함수 
+        btn2.addEventListener('click', ()=>{
+          alert('직접 등록한 함수')
+        }); 
+
+        // Case 4) 이벤트 객체 
+        // 이벤트가 발생하는 타겟과 그 내용을 알 수 있다. 
+        // 매개변수를 이용해서 target의 내용을 잡는다.
+        let eventBtn = document.getElementById('btn_event');
+        eventBtn.addEventListener('click', (e)=>{
+          console.log(e.target.innerText);
+        });
+
 
     </script>
   </body>

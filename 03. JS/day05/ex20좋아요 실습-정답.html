@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>👍<span id="number">0</span></p>
+    <button id="like">좋아요</button>
+    <button id="hate">싫어요</button>
+
+    <script>
+      /** 좋아요 함수*/
+      const like = () => {
+        console.log("like function");
+
+        let num = document.getElementById("number");
+        num.innerText = Number(num.innerText) + 1;
+      };
+
+      /** 싫어요 함수*/
+      const hate = () => {
+        console.log("hate function");
+        let num = document.getElementById("number");
+        if (Number(num.innerText) > 0) {
+          
+          num.innerText = Number(num.innerText) - 1;
+        }
+      };
+
+      let btnLike = document.getElementById("like");
+      btnLike.addEventListener("click", like);
+
+      let btnHate = document.getElementById('hate');
+      btnHate.addEventListener("click", hate);
+    </script>
+  </body>
+</html>

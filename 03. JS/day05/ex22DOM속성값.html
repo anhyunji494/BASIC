@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputText">
+    <button id="inputBtn">input 태그 값 가져오기</button>
+    <div id="place"></div>
+
+    <img src="https://mblogthumb-phinf.pstatic.net/MjAyMjA3MjZfMTE5/MDAxNjU4ODE0Nzk1ODI5.xhfY0TxLJ7XmOxOtVgUQT9AkLpHd3l0A7Ym3QtXUmRwg.si2evYwz9yhdqskHRjQcr64zzhLeHY1ojvtZy1sfTO4g.JPEG.luiscorea/Screenshot%EF%BC%BF20220726%EF%BC%8D145107%EF%BC%BFNAVER.jpg?type=w800" id="imgTag" width="200px">
+    <button id="getImgBtn">이미지 값 불러오기</button>
+    <button id="setImgBtn">이미지 변경하기</button>
+
+    <script>
+        // DOM을 이용해서 속성값, 사용자 입력값을 가져오거나, 바꿔보자 
+
+        // 1. 사용자가 input 태그 안에 입력한 value 값 가져오기 : 요소.value
+        document.getElementById('inputBtn').addEventListener('click', ()=>{
+            console.log('inputBtn click');
+
+            // input 태그 안에 사용자가 입력한 값 가져오기 
+            let inputTag = document.getElementById('inputText');
+            console.log(inputTag.value);
+
+            // 공간에 사용자가 입력한 값으로 세팅하기 
+            document.getElementById('place').innerHTML = inputTag.value
+
+            // value 안에 있는 값 초기화 하기 
+            inputTag.value = "";
+
+            
+        });
+
+        // 2. 태그에 접근해서 속성 값을 출력하거나 변경하기 
+
+        // 2-1. img 태그에 접근해보자 
+        document.getElementById('getImgBtn').addEventListener('click', ()=>{
+            console.log('getImgBtn Ck');
+        });
+
+        // 현재 img의 속성값 출력 
+        let imgTag = document.getElementById('imgTag');
+
+        // case 1 : 이미지요소.속성이름 => 가져올 수 있다 
+        console.log(imgTag.src);
+        console.log(imgTag.width);
+        console.log(imgTag.id);
+
+        // case 2 : getAttribute('속성이름')
+        console.log(imgTag.getAttribute('src'));
+        console.log(imgTag.getAttribute('width'));
+        console.log(imgTag.getAttribute('id'));
+
+
+        // 2-2. img 태그에 접근해서 속성을 수정해보자. 
+        document.getElementById('setImgBtn').addEventListener('click', ()=>{
+            console.log('setImgBtn ck')
+            let imgTag = document.getElementById('imgTag');
+
+            // case 1. 요소.속성이름 = '바꿀값'
+            imgTag.src = 'https://mblogthumb-phinf.pstatic.net/MjAyMjA3MjZfMjMg/MDAxNjU4ODE0NzkyNzg5.sMQKkn1tEXK_s76BWuhuShCJA3mRYoFYS4hIin5DxFAg.gPhCBtTlg3kU3AI3Tdw-g3o1tmkhV9gxSxV-1ndSNzsg.JPEG.luiscorea/Screenshot%EF%BC%BF20220726%EF%BC%8D144908%EF%BC%BFNAVER.jpg?type=w800'
+
+
+            // case 2. setAttribute('바꿀속성', '바꿀 값')
+            imgTag.setAttribute('width', '500')
+        })
+    </script>
+</body>
+</html>
