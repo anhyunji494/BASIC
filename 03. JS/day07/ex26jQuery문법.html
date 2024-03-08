@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img id="pic" width="200px" src="https://newsimg.sedaily.com/2019/09/04/1VO45O5N53_3.jpg" />
+    <p id="abc">여러분 안녕하세요~ </p>
+    <input type="text" id="inputTxt" />
+    <button id="btn">내용 변경!</button>
+    <br>
+    <button id="style-btn">스타일 변경</button>
+    <button id="pic-btn">사진 변경</button>
+
+    <script>
+        // jQuery 문법의 기호 : $ 
+
+        // 1. id가'abc'인 요소를 가져오기 
+        // v-JS document.getElementById('abc');
+        // jQuery $('선택자')
+
+        let element = $('#abc');
+        console.log('요소', element);
+
+        // 2. 내가 원하는 요소 안의 내용만 가져오기 
+        // v-JS : .innerText
+        // jQuery : .text()
+
+        let txt = element.text();
+        console.log('txt', txt);
+
+        // 3. 내가 원하는 요소 수정해보기 
+        // v-JS : .innerText = '바꿀값'
+        // jQuery : .text('바꿀값')
+
+        element.text('웅니 너무 예뻐요');
+
+        // 4. 태그 요소까지 포함해서 수정하기 
+        // v-JS : .innerHTML = '수정할 값'
+        // jQuery : .html('수정할값')
+
+        element.html('<h1>웅니 너무 예뻐요</h1>')
+
+        // 5. 버튼을 눌렀을 때, input 태그 값으로 내용을 변경 
+        // 5-1. 버튼 이벤트 잡기 
+        // v-JS : document.요소.addEventListener('click', 함수)
+        // jQuery : .click(함수)
+
+        $('#btn').click(()=>{
+            console.log('btn ck');
+
+
+
+
+        // 5-2. 사용자가 input 안에 입력한 값 가져오기 
+        // v-JS : .value 
+        // jQuery : .val()
+
+        let val = $('#inputTxt').val(); 
+        console.log('input', val);
+
+        element.text(val);
+
+        // 입력창 비우기 
+        $('#inputTxt').val("");
+
+        })
+
+        // 6. 스타일 변경 
+
+        // v-JS : .style.속성 = '값';
+        // jQuery : .css('속성', '값');
+
+        $('#style-btn').click(()=>{
+            element.css('color', 'hotpink');
+        })
+
+        // 7. 속성 변경 
+
+        // v-JS : .속성
+        // jQuery : .attr() => setAttribute대체 
+
+        $('#pic-btn').click(()=>{
+            $('#pic').attr('src', 'https://cdn.hankooki.com/news/photo/202211/35622_47752_1669044843.jpg')
+        })
+
+    </script>
+</body>
+</html>

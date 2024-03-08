@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <span id="num">0</span>
+    <br />
+    <button id="plus">+1</button>
+    <button id="minus">-1</button>
+    <script>
+      let num = $("#num");
+
+      $("#plus").click(() => {
+        let spanNum = Number(num.text());
+        num.text(spanNum + 1);
+      });
+
+      $("#minus").click(() => {
+        if (spanNum > 0) {
+          let spanNum = Number(num.text());
+          num.text(spanNum - 1);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <span id="num">0</span>
+    <br />
+    <button id="plus">+1</button>
+    <button id="minus">-1</button>
+    <script>
+      $("#num").text(0);
+      let num = 0;
+      // 1. +버튼을 눌렀을 때 숫자가 1씩 증가
+      $("#plus").click(() => {
+        console.log("plus ck");
+        num = num + 1;
+        $("#num").text(num);
+        console.log(num);
+      });
+      // 2. -버튼을 눌렀을 때 숫자가 1씩 감소
+      // 이때, 0 아래로는 숫자가 떨어지지 않도록
+      // ** 조건 : v-JS가 아닌 jQuery 문법만을 이용해서 문제를 풀 것
+      $("#minus").click(() => {
+        console.log("minus ck");
+        if (num > 0) {
+          num = num - 1;
+          $("#num").text(num);
+          console.log(num);
+        }
+      });
+    </script>
+  </body>
+</html>
