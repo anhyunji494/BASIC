@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex02.날씨</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1>오늘의 날씨는?</h1>
+    <button class="btn">Seoul</button>
+    <button class="btn">Wien</button>
+    <button class="btn">Osaka</button>
+    <div id="weatherBox"></div>
+
+    <script>
+
+      const callCibyWeather = (city)=>{
+          let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=603aa562f93c1b6e5fb4e7596aa820d5`
+
+          // Case 1. aJax
+          // $.ajax({
+          // url : url,
+          // type : 'get',
+          // success : (res)=>{console.log('succes', res)},
+          // error: ()=>{
+          //     console.log('통신 실패')}
+          // });
+
+          // Case 2. Fetch
+          fetch(url)
+          .then(res => res.json())
+          .then(res => {
+            
+              console.log('success', parseInt(res.main.temp-273))
+              // id가 weatherBox인 공간 안에 "온도는 nn도  입 니다. "라고 뜨게 하기
+            
+              
+
+              //weatherLpenAPI: 켈빈 온도
+
+              //켈빈온도  - 253 = 섭씨온도
+
+              document.getElementById('weatherBox').innerHTML=`<h1>현재 온도는 ${parseInt(res.main.temp-273)}도 입니다.</h2>`
+
+      })
+
+      };
+
+      $('.btn').click((e)=>{
+          console.log('ck', e.target.innerText)
+          callCibyWeather(e.target.innerText)
+      });
+    </script>
+  </body>
+</html>

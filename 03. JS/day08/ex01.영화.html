@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../day07/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button onclick="getDataAjax()">aJax로 데이터가져오기</button>
+    <button onclick="getDataFetch()">fetch로 데이터가져오기</button>
+
+
+    <script>
+        let url = "https://api.openweathermap.org/data/2.5/weather?q=berlin&appid=603aa562f93c1b6e5fb4e7596aa820d5";
+
+        const getDataAjax = ()=>{
+            // 비동기 통신방법 Case 1) Ajax
+            // - 장점: jQuery를 통해 쉬운 코드로 구현이 가능
+            // - 단점: jQuery가 없다면 코드가 복잡해짐
+
+            $.ajax({
+                url : url, // 요청 서버 경로 (외부 주소, 내부 파일)
+                type : 'get', // 요청방식 (get/post)
+
+                // 만약 내가 back-end에 보내줄 데이터가 있다면?
+                // data: {'name' : '선영표', 
+                //        'id' : 'seonzeroticket'},
+
+                success : (res)=>{
+                    console.log('통신 성공', res.clouds.all);
+                },
+                error : ()=>{
+                    console.log('통신 실패');
+                }
+            })
+
+        };
+        const getDataFetch = ()=>{
+            // 통신 방법 Case 2. Fetch
+            // - 장점 : jQuery 필요 X, JS 내장 라이브러리, 별도의 설치 X ,속도가 빠르다, 
+            // - 단점 : 디테일한 설정 부족 (React에서는 axios라는 라이브러리를 선호)
+
+            fetch(url) // 요청 서버 경로
+            .then(res => res.json()) // 내가 가져온 응답 결과 json 형태로 파싱
+            .then(res => console.log(res)) // 성공 시 
+            // 순차적 => promise 문법의 특징 
+            .catch(err => console.log(err))// 실패 시 
+
+            // 만약 내가 fetch를 이용해서 back-end로 데이터를 보내줘야 할 때는? 
+            // fetch(url, {
+            //      method : 'post'
+            //      body : {'name' : '선영표'}
+            // }), then()
+
+            
+            
+            
+        };
+
+
+
+    </script>
+</html>

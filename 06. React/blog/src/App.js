@@ -24,7 +24,7 @@ function App() {
         <div>개발 Blog</div>
       </div>
 
-      <button onClick={글제목수정}>버튼</button>
+      
 
       <div className="list">
         <h3>
@@ -53,6 +53,18 @@ function App() {
         <p>2월 19일 발행</p>
         <hr />
       </div>
+
+
+      {/* 상세페이지 모달창 */}
+
+      <div className="modal">
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+
+
+
     </div>
   );
 }
